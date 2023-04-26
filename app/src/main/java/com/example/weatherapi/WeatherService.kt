@@ -23,7 +23,7 @@ class WeatherService {
             .addQueryParameter("fields", "temperature")
             .addQueryParameter("timesteps", "1d")
             .addQueryParameter("units", "metric")
-            .addQueryParameter("apikey", "YOUR_API_KEY")
+            .addQueryParameter("apikey", "cSO1Ykhep8fjoxY4OCTJeTto33wFOvrf")
             .build()
 
         val request = Request.Builder().url(url).build()
@@ -40,3 +40,12 @@ class WeatherService {
         }
     }
 }
+
+
+//private fun getWeatherForCity(cityName: String): Observable<WeatherResponse> {
+//    return locationService.getCityCoordinates(cityName)
+//        .flatMap { coordinates ->
+//            getWeatherData(coordinates)
+//        }.subscribeOn(Schedulers.io())
+//        .observeOn(AndroidSchedulers.mainThread())
+//}
