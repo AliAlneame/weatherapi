@@ -4,8 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.weatherapi'
-    compileSdk 33
+    compileSdkVersion 33 // Use this line
 
     defaultConfig {
         applicationId "com.example.weatherapi"
@@ -35,7 +34,6 @@ android {
     }
 }
 
-
 dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -44,6 +42,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     implementation 'io.reactivex.rxjava3:rxjava:3.1.6'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
     implementation 'com.google.code.gson:gson:2.10.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

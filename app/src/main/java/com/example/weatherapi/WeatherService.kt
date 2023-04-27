@@ -1,4 +1,7 @@
-package com.example.weatherapi
+import com.example.weatherapi.LocationService
+import com.example.weatherapi.WeatherResponse
+
+
 
 import com.google.gson.Gson
 import io.reactivex.rxjava3.core.Observable
@@ -11,6 +14,9 @@ class WeatherService {
     private val gson = Gson()
     private val locationService = LocationService()
 
+    fun getAllCountries(): Observable<List<String>> {
+        return locationService.getAllCountries()
+    }
     fun getWeatherForCity(cityName: String): Observable<WeatherResponse> {
         return locationService.getCityCoordinates(cityName)
             .flatMap(::getWeatherData)

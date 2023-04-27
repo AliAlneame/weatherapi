@@ -24,3 +24,8 @@ data class Interval(
 data class WeatherValues(
     val temperature: Double
 )
+data class WeatherItem(
+    val cityName: String,
+    val date: String,
+    val weatherData: WeatherValues
+)
